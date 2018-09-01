@@ -49,19 +49,18 @@ body {
 }
 
 #content_box {
-    /* margin: 0 auto; */
-    /* height: 1000px; */
-    /* max-width: 405px; */
+    margin: 0 auto 80px auto;
+    height: 1000px;
+    max-width: 405px;
     /* background-color: aliceblue; */
     /* background-size: cover; */
+    background: url(/assets/images/parchment.jpg);
+    background-size: contain;
 }
 
 /* END THE CONTENT CONTAINERS */
-
 /* MEDIA QUERIES BELOW */
-
 /* MAX WIDTH MEDIA QUERIES BELOW */
-
 @media screen and (max-width: 640px) {
     #logo {
         width: 80%;
@@ -84,22 +83,22 @@ body {
 /* MIN WIDTH MEDIA QUERIES BELOW */
 @media screen and (min-width: 640px) {
     #logo {
-        {
-        /* width: 240px; */
+            {
+            /* width: 240px; */
+        }
     }
-}
 
-@media screen and (min-width: 768px) {
-    #logo {
-        /* width: 440px; */
+    @media screen and (min-width: 768px) {
+        #logo {
+            /* width: 440px; */
+        }
     }
-}
 
-@media screen and (min-width: 980px) {
-    #logo {
-        /* width: 640px; */
+    @media screen and (min-width: 980px) {
+        #logo {
+            /* width: 640px; */
+        }
     }
-}
 
-/* MIN WIDTH MEDIA QUERIES ABOVE */
-/* MEDIA QUERIES ABOVE */
+    /* MIN WIDTH MEDIA QUERIES ABOVE */
+    /* MEDIA QUERIES ABOVE */
