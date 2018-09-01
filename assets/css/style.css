@@ -1,1 +1,105 @@
-/* Monty Python's Flying Trivia CSS */
+/* Monty Python's Flying Trivia
+basic trivia game assignment
+© Richard Trevillian, 2018-09-01
+University of Richmond, Full Stack Web Development Bootcamp
+CSS styles */
+/* START DECLARE NATIVE SYSTEM FONTS */
+@font-face {
+    font-family: system;
+    font-style: normal;
+    font-weight: 300;
+    src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+}
+
+/* END DECLARE NATIVE SYSTEM FONTS */
+/* START THE MAIN GAME CONTAINERS */
+body {
+    background-color: #8db9cd;
+}
+
+#container {
+    margin: 0 auto;
+    max-width: 980px;
+    /* width: 100vw; */
+    /* height: 100vh; */
+    /* background-color: bisque; */
+    /* background: url(../images/#); */
+    padding: 2% 0 2% 0;
+}
+
+#game_box {
+    /* margin: 0 auto; */
+    height: 1000px;
+    /* max-width: 405px; */
+    /* background-color: aliceblue; */
+    /* background-size: cover; */
+}
+
+/* END THE MAIN GAME CONTAINERS */
+/* START THE CONTENT CONTAINERS */
+#logo_box {
+    text-align: center;
+    /* margin: 0 auto; */
+    /* max-width: 980px; */
+    /* width: 100vw; */
+    /* height: 100vh; */
+    /* background-color: bisque; */
+    /* background: url(assets/images/mp_logo.png); */
+    /* padding: 2% 0 2% 0; */
+}
+
+#content_box {
+    /* margin: 0 auto; */
+    /* height: 1000px; */
+    /* max-width: 405px; */
+    /* background-color: aliceblue; */
+    /* background-size: cover; */
+}
+
+/* END THE CONTENT CONTAINERS */
+
+/* MEDIA QUERIES BELOW */
+
+/* MAX WIDTH MEDIA QUERIES BELOW */
+
+@media screen and (max-width: 640px) {
+    #logo {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #logo {
+        width: 340px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #logo {
+        width: 440px;
+    }
+}
+
+/* MAX WIDTH MEDIA QUERIES ABOVE */
+/* MIN WIDTH MEDIA QUERIES BELOW */
+@media screen and (min-width: 640px) {
+    #logo {
+        {
+        /* width: 240px; */
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #logo {
+        /* width: 440px; */
+    }
+}
+
+@media screen and (min-width: 980px) {
+    #logo {
+        /* width: 640px; */
+    }
+}
+
+/* MIN WIDTH MEDIA QUERIES ABOVE */
+/* MEDIA QUERIES ABOVE */
