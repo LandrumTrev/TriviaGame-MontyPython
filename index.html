@@ -20,17 +20,497 @@
 
         <div id="content_box">
 
-            <div id="instruct">
-                <img id="instruct_img" src="assets/images/instructions.png" alt="">
-            </div>
-            <div id="instructions">
-                <p>Quae eos ut cupiditate rerum officia excepturi necessitatibus. Maxime nemo ipsum architecto rerum ut itaque. Dolorem esse non numquam blanditiis dolores aliquam ad quia. Cum et corrupti omnis aspernatur sunt.</p>
+            <div id="start_box" style="display:none;">
+                <div id="instruct_box">
+                    <img id="instruct_img" src="assets/images/instructions.png" alt="">
+                </div>
+                <div id="body_content">
+                    <p>Quae eos ut cupiditate rerum officia excepturi necessitatibus. Maxime nemo ipsum architecto rerum ut itaque. Dolorem esse non numquam blanditiis dolores aliquam ad quia. Cum et corrupti omnis aspernatur sunt.</p>
 
-                <p>Maxime ut delectus voluptates cum. Dolorem odio ea architecto doloremque. Quas in est voluptatem modi inventore. Qui aliquid molestiae est quis. Tempore unde dolorem.</p>
+                    <p>Maxime ut delectus voluptates cum. Dolorem odio ea architecto doloremque. Quas in est voluptatem modi inventore. Qui aliquid molestiae est quis. Tempore unde dolorem.</p>
+                </div>
+                <div id="btn_space">
+                    <img id="btn_img" src="/assets/images/btn_start.png" alt="">
+                </div>
             </div>
-            <div id="btn_space">
-                <img id="btn_img" src="/assets/images/btn_start.png" alt="">
+
+            <div id="quiz_box" style="display:block;">
+                <!-- <div id="timer_box">               
+                    </div> -->
+                <div id="body_content">
+                    <form action="">
+
+                        <fieldset>
+                            <legend><strong>1. There are some who call me...</strong></legend>
+                            <p>
+                                <input type="radio" name="callMe" id="1a" value="Bocephus">
+                                <label for="1a">Bocephus </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="callMe" id="1b" value="Ray">
+                                <label for="1b">Ray </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="callMe" id="1c" value="Tim">
+                                <label for="1c">Tim </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="callMe" id="1d" value="Bryan">
+                                <label for="1d">Bryan </label>
+                            </p>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend><strong>2. In the Dead Parrot sketch, the eponymous avian was a...
+                                </strong></legend>
+                            <p>
+                                <input type="radio" name="parrot" id="2a" value="Papuan King Parrot">
+                                <label for="2a">Papuan King Parrot </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="parrot" id="2b" value="Norwegian Blue">
+                                <label for="2b">Norwegian Blue </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="parrot" id="2c" value="Golden Conure">
+                                <label for="2c">Golden Conure </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="parrot" id="2d" value="Dusky Lory">
+                                <label for="2d">Dusky Lory </label>
+                            </p>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend><strong>3. It's just a harmless little...</strong></legend>
+                            <p>
+                                <input type="radio" name="harmless" id="3a" value="Lamb">
+                                <label for="3a">Lamb </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="harmless" id="3b" value="Hamster">
+                                <label for="3b">Hamster </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="harmless" id="3c" value="Bunny">
+                                <label for="3c">Bunny </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="harmless" id="3d" value="Platypus">
+                                <label for="3d">Platypus </label>
+                            </p>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend><strong>4. It was the Salmon...</strong></legend>
+                            <p>
+                                <input type="radio" name="salmon" id="4a" value="Filet">
+                                <label for="4a">Filet </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="salmon" id="4b" value="Burger">
+                                <label for="4b">Burger </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="salmon" id="4c" value="Lox">
+                                <label for="4c">Lox </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="salmon" id="4d" value="Mousse">
+                                <label for="4d">Mousse </label>
+                            </p>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend><strong>5. Your mother was a hamster, and your father smelt of...</strong></legend>
+                            <p>
+                                <input type="radio" name="mother" id="5a" value="Cheap Vodka">
+                                <label for="5a">Cheap Vodka </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="mother" id="5b" value="Toejam">
+                                <label for="5b">Toejam </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="mother" id="5c" value="Cat Puke">
+                                <label for="5c">Cat Puke </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="mother" id="5d" value="Elderberries">
+                                <label for="5d">Elderberries </label>
+                            </p>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend><strong>6. My hovercraft is full of...</strong></legend>
+                            <p>
+                                <input type="radio" name="hovercraft" id="6a" value="Water">
+                                <label for="6a">Water </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="hovercraft" id="6b" value="Hungarian Tourists">
+                                <label for="6b">Hungarian Tourists </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="hovercraft" id="6c" value="Eels">
+                                <label for="6c">Eels </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="hovercraft" id="6d" value="Air">
+                                <label for="6d">Air </label>
+                            </p>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend><strong>7. We don't have a lord, we're a(n)...</strong></legend>
+                            <p>
+                                <input type="radio" name="noLord" id="7a" value="Autonomous Knitting Collective">
+                                <label for="7a">Autonomous Knitting Collective </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="noLord" id="7b" value="Anarcho-Syndicalist Commune">
+                                <label for="7b">Anarcho-Syndicalist Commune </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="noLord" id="7c" value="Band of Merry Theives">
+                                <label for="7c">Band of Merry Theives </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="noLord" id="7d" value="Bunch of Squatters">
+                                <label for="7d">Bunch of Squatters </label>
+                            </p>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend><strong>8. What's in the wainscoting?
+                                </strong></legend>
+                            <p>
+                                <input type="radio" name="wainscoting" id="8a" value="Mice">
+                                <label for="8a">Mice </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="wainscoting" id="8b" value="Television Repair Men">
+                                <label for="8b">Television Repair Men </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="wainscoting" id="8c" value="Pirate's Gold">
+                                <label for="8c">Pirate's Gold </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="wainscoting" id="8d" value="Sheep">
+                                <label for="8d">Sheep </label>
+                            </p>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend><strong>9. And now for something...</strong></legend>
+                            <p>
+                                <input type="radio" name="something" id="9a" value="Really Exciting">
+                                <label for="9a">Really Exciting </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="something" id="9b" value="Stupendous and Stupifiying">
+                                <label for="9b">Stupendous and Stupifiying </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="something" id="9c" value="Completely Different">
+                                <label for="9c">Completely Different </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="something" id="9d" value="Boring and Tedious">
+                                <label for="9d">Boring and Tedious </label>
+                            </p>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend><strong>10. Wicked, bad, naughty Zoot! She has been setting alight to our beacon, which I just remembered was...</strong></legend>
+                            <p>
+                                <input type="radio" name="zoot" id="10a" value="Brighter than the lighthouse">
+                                <label for="10a">Brighter than the lighthouse </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="zoot" id="10b" value="Grail-shaped">
+                                <label for="10b">Grail-shaped </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="zoot" id="10c" value="Orange">
+                                <label for="10c">Orange </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="zoot" id="10d" value="Not supposed to be ever lit again">
+                                <label for="10d">Not supposed to be ever lit again </label>
+                            </p>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend><strong>11. Explain to me again how sheep's bladders may be used to...</strong></legend>
+                            <p>
+                                <input type="radio" name="bladders" id="11a" value="Relieve Indigestion">
+                                <label for="11a">Relieve Indigestion </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="bladders" id="11b" value="Prevent Earthquakes">
+                                <label for="11b">Prevent Earthquakes </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="bladders" id="11c" value="Find True North">
+                                <label for="11c">Find True North </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="bladders" id="11d" value="Make Funny Noises">
+                                <label for="11d">Make Funny Noises </label>
+                            </p>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend><strong>12. What is the average air speed velocity of an unladen swallow?</strong></legend>
+                            <p>
+                                <input type="radio" name="swallow" id="12a" value="Faster than a blind bat">
+                                <label for="12a">Faster than a blind bat </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="swallow" id="12b" value="100 meters per second">
+                                <label for="12b">100 meters per second </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="swallow" id="12c" value="Too fast to calculate">
+                                <label for="12c">Too fast to calculate </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="swallow" id="12d" value="African or European Swallow?">
+                                <label for="12d">African or European Swallow? </label>
+                            </p>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend><strong>13. We are the knights who say...</strong></legend>
+                            <p>
+                                <input type="radio" name="knights" id="13a" value="None Shall Pass">
+                                <label for="13a">None Shall Pass </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="knights" id="13b" value="Right On!">
+                                <label for="13b">Right On! </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="knights" id="13c" value="Nothing">
+                                <label for="13c">Nothing </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="knights" id="13d" value="Ni!">
+                                <label for="13d">Ni! </label>
+                            </p>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend><strong>14. You must chop down the largest tree in the forest with... a
+                                </strong></legend>
+                            <p>
+                                <input type="radio" name="chopdown" id="14a" value="Pocketknife">
+                                <label for="14a">Pocketknife </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="chopdown" id="14b" value="Barbershop Quartet">
+                                <label for="14b">Barbershop Quartet </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="chopdown" id="14c" value="Herring">
+                                <label for="14c">Herring </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="chopdown" id="14d" value="Can of Spam">
+                                <label for="14d">Can of Spam </label>
+                            </p>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend><strong>15. In the frozen land of Nador, they were forced to eat...</strong></legend>
+                            <p>
+                                <input type="radio" name="nador" id="15a" value="Sir Robin's Minstrels">
+                                <label for="15a">Sir Robin's Minstrels </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="nador" id="15b" value="Dirt">
+                                <label for="15b">Dirt </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="nador" id="15c" value="Biscuits Without Jam">
+                                <label for="15c">Biscuits Without Jam </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="nador" id="15d" value="Snow">
+                                <label for="15d">Snow </label>
+                            </p>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend><strong>16. How does it work? I know not my liege, consult...</strong></legend>
+                            <p>
+                                <input type="radio" name="consult" id="16a" value="Your Financial Advisor">
+                                <label for="16a">Your Financial Advisor </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="consult" id="16b" value="The Book of Armaments">
+                                <label for="16b">The Book of Armaments </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="consult" id="16c" value="The Boy Scout Handbook">
+                                <label for="16c">The Boy Scout Handbook </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="consult" id="16d" value="Young Squire Arnold">
+                                <label for="16d">Young Squire Arnold </label>
+                            </p>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend><strong>17. No one expects...</strong></legend>
+                            <p>
+                                <input type="radio" name="expects" id="17a" value="Captain Unexpected">
+                                <label for="17a">Captain Unexpected </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="expects" id="17b" value="Ron Obvious of Neet's End">
+                                <label for="17b">Ron Obvious of Neet's End </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="expects" id="17c" value="The Spanish Inquisition">
+                                <label for="17c">The Spanish Inquisition </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="expects" id="17d" value="A Bad Hair Day">
+                                <label for="17d">A Bad Hair Day </label>
+                            </p>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend><strong>18. No. 1...</strong></legend>
+                            <p>
+                                <input type="radio" name="number" id="18a" value="The One And Only">
+                                <label for="18a">The One And Only </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="number" id="18b" value="Ichiban!">
+                                <label for="18b">Ichiban! </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="number" id="18c" value="The Larch">
+                                <label for="18c">The Larch </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="number" id="18d" value="Mrs. Sampers">
+                                <label for="18d">Mrs. Sampers </label>
+                            </p>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend><strong>19. What makes you think she is a witch?</strong></legend>
+                            <p>
+                                <input type="radio" name="witch" id="19a" value="She's got a black cat">
+                                <label for="19a">She's got a black cat </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="witch" id="19b" value="She runs a broomstick repair shop">
+                                <label for="19b">She runs a broomstick repair shop </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="witch" id="19c" value="She turned me into a newt">
+                                <label for="19c">She turned me into a newt </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="witch" id="19d" value="She's always cavorting by the light of the moon">
+                                <label for="19d">She's always cavorting by the light of the moon </label>
+                            </p>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend><strong>20. One day lad, all this will be yours.
+                                </strong></legend>
+                            <p>
+                                <input type="radio" name="oneDay" id="20a" value="I can't wait... which day?">
+                                <label for="20a">I can't wait... which day? </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="oneDay" id="20b" value="It's only a model.">
+                                <label for="20b">It's only a model. </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="oneDay" id="20c" value="What, the curtains?">
+                                <label for="20c">What, the curtains? </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="oneDay" id="20d" value="But I want huge...tracts of land!">
+                                <label for="20d">But I want huge...tracts of land! </label>
+                            </p>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend><strong>21. On second thought, let's not go to Camelot...</strong></legend>
+                            <p>
+                                <input type="radio" name="camelot" id="21a" value="It's too drafty.">
+                                <label for="21a">It's too drafty. </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="camelot" id="21b" value="There's no beer.">
+                                <label for="21b">There's no beer. </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="camelot" id="21c" value="It is a silly place.">
+                                <label for="21c">It is a silly place. </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="camelot" id="21d" value="It smells like cat sneezes.">
+                                <label for="21d">It smells like cat sneezes. </label>
+                            </p>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend><strong>22. I will send help as soon as I have accomplished a daring and heroic rescue in my own particular...</strong></legend>
+                            <p>
+                                <input type="radio" name="sendHelp" id="22a" value="Way">
+                                <label for="22a">Way </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="sendHelp" id="22b" value="Idiom">
+                                <label for="22b">Idiom </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="sendHelp" id="22c" value="Joie de Vivre">
+                                <label for="22c">Joie de Vivre </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="sendHelp" id="22d" value="Nexus of Time and Space">
+                                <label for="22d">Nexus of Time and Space </label>
+                            </p>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend><strong>23. I will not buy this record, it is...</strong></legend>
+                            <p>
+                                <input type="radio" name="record" id="23a" value="A Bunch Of Old Show Tunes">
+                                <label for="23a">A Bunch Of Old Show Tunes </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="record" id="23b" value="Scratched">
+                                <label for="23b">Scratched </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="record" id="23c" value="Too Expensive">
+                                <label for="23c">Too Expensive </label>
+                            </p>
+                            <p>
+                                <input type="radio" name="record" id="23d" value="Not What I Call Music">
+                                <label for="23d">Not What I Call Music </label>
+                            </p>
+                        </fieldset>
+
+                    </form>
+                </div>
+                <div id="btn_space">
+                    <img id="btn_img" src="/assets/images/btn_done.png" alt="">
+                </div>
             </div>
+
 
         </div>
 
