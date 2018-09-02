@@ -3,6 +3,8 @@ basic trivia game assignment
 © Richard Trevillian, 2018-09-01
 University of Richmond, Full Stack Web Development Bootcamp
 CSS styles */
+
+
 /* START DECLARE NATIVE SYSTEM FONTS */
 @font-face {
     font-family: system;
@@ -15,6 +17,7 @@ CSS styles */
 /* START THE MAIN GAME CONTAINERS */
 body {
     background-color: #8db9cd;
+    width: 90%;
 }
 
 #container {
