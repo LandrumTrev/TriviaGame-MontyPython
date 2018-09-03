@@ -4,110 +4,40 @@
 // University of Richmond, Full Stack Web Development Bootcamp
 // JavaScript
 
-let answersArray = [
-    "Tim",
-    "Norwegian Blue",
-    "Bunny",
-    "Mousse",
-    "Elderberries",
-    "Eels",
-    "Anarcho-Syndicalist Commune",
-    "Sheep",
-    "Completely Different",
-    "Grail-shaped",
-    "Prevent Earthquakes",
-    "African or European Swallow?",
-    "Ni!",
-    "Herring",
-    "Sir Robin's Minstrels",
-    "The Book of Armaments",
-    "The Spanish Inquisition",
-    "The Larch",
-    "She turned me into a newt",
-    "What... the curtains?",
-    "It is a silly place",
-    "Idiom",
-    "Scratched",
-];
 
 
 $(document).ready(function () {
 
-    // ACTIONS PERFORMED WHEN CLICKING START BUTTON ON HOME PAGE
-    $('#btn_start').click(function () {
 
-        // hide the Start Page DIV, and
-        $('#start_box').attr('style', 'display:none;');
-        // show the Quiz questions DIV
-        $('#quiz_box').attr('style', 'display:block;');
+    // set an Array of the values of all correct answers
+    let answersArray = [
+        "Tim",
+        "Norwegian Blue",
+        "Bunny",
+        "Mousse",
+        "Elderberries",
+        "Eels",
+        "Anarcho-Syndicalist Commune",
+        "Sheep",
+        "Completely Different",
+        "Grail-shaped",
+        "Prevent Earthquakes",
+        "African or European Swallow?",
+        "Ni!",
+        "Herring",
+        "Sir Robin's Minstrels",
+        "The Book of Armaments",
+        "The Spanish Inquisition",
+        "The Larch",
+        "She turned me into a newt",
+        "What... the curtains?",
+        "It is a silly place",
+        "Idiom",
+        "Scratched",
+    ];
 
-
-
-        var timer = {
-
-            // set the starting value of the countdown timer in seconds
-            timeLeft: 80,
-
-            start: function () {
-
-                // DONE: Use setInterval to start the count here and set the clock to running.
-                if (!clockRunning) {
-                    intervalId = setInterval(stopwatch.count, 1000);
-                    clockRunning = true;
-                }
-            },
-
-            // define a function for counting down the time
-            countDown: function () {
-                // decrement the timeLeft value by 1 (second)
-                timer.timeLeft--;
-                // create a variable whose value is timeLeft seconds converted into clock format time by timeConverter method
-                var convertedTime = timer.timeConverter(timer.timeLeft);
-                console.log(convertedTime);
-                // DONE: Use the variable we just created to show the converted time in the "display" div.
-                $("#timer").text(convertedTime);
-            },
-
-
-            // timeConverter function copied from the stopwatchSolution.js class activity... thank you! :-)
-            timeConverter: function (t) {
-
-                var minutes = Math.floor(t / 60);
-                var seconds = t - (minutes * 60);
-
-                if (seconds < 10) {
-                    seconds = "0" + seconds;
-                }
-
-                if (minutes === 0) {
-                    minutes = "00";
-                } else if (minutes < 10) {
-                    minutes = "0" + minutes;
-                }
-
-                return minutes + ":" + seconds;
-            }
-
-
-        }
-
-        // setTimeout(timesUp, 1000 * 5);
-
-        // function timesUp() {
-        //     $("#time-left").append("<h2>Time's Up!</h2>");
-        //     console.log("time is up");
-        // }
-
-    });
-
-    // ACTIONS PERFORMED WHEN CLICKING DONE BUTTON ON QUIZ PAGE
-    $('#btn_done').click(function () {
-
-        // hide the Quiz questions DIV, and...
-        $('#quiz_box').attr('style', 'display:none;');
-        // show the Results page DIV
-        $('#results_box').attr('style', 'display:block;');
-
+    // define the displayResults() function, to be called both by clicking the DONE button, and by the TIMER timeout
+    function displayResults() {
 
         // for some reason, these variables have be initialized OUTSIDE of the below .each function
         // otherwise there is only a single item in the resulting checkedArray
@@ -158,6 +88,95 @@ $(document).ready(function () {
 
         }
 
+    };
+
+
+    // ACTIONS PERFORMED WHEN CLICKING START BUTTON ON HOME PAGE
+    $('#btn_start').click(function () {
+
+        // hide the Start Page DIV, and
+        $('#start_box').attr('style', 'display:none;');
+        // show the Quiz questions DIV
+        $('#quiz_box').attr('style', 'display:block;');
+
+
+        // START COUNTDOWN TIMER CODE
+
+        // set the number of seconds the countdown will start at
+        let time = 240;
+
+        // write the initial starting number to the page (match to seconds set in the TIME variable)
+        $("#timer").text("04:00");
+
+        // declare the intervalId variable (will take a callback function and time length as setInterval)
+        let intervalId;
+
+        // define the START function to start the countdown (call below)
+        function start() {
+            // intervalId defined as setInterval with COUNT callback function and 1 sec interval
+            intervalId = setInterval(count, 1000);
+        }
+
+        // the Callback function called in START's setInterval() method
+        // this function's actions run once every second, as defined by setInterval(count, 1000), above
+        function count() {
+
+            // each time COUNT is called by START(), every 1 second, decrement the value of time by 1 (second)
+            time--;
+            // a variable to stand for the value of TIME, converted into clock time by the timeConverter() function below
+            let converted = timeConverter(time);
+            // write the new clock time (new second) converted by timeConverter() to the TIMER page DIV
+            $("#timer").text(converted);
+            // when the value of time reaches 0, then...
+            if (time === 0) {
+                // stop intervalId (defined in START) by passing it into clearInterval() method as an argument
+                clearInterval(intervalId);
+                // hide the Quiz questions DIV, and...
+                $('#quiz_box').attr('style', 'display:none;');
+                // show the Results page DIV
+                $('#results_box').attr('style', 'display:block;');
+                // and run the displayResults function
+                displayResults();
+                console.log("Time is up!");
+            }
+        }
+
+        // timeConverter function copied from the stopwatchSolution.js class activity... thank you! :-)
+        function timeConverter(t) {
+
+            var minutes = Math.floor(t / 60);
+            var seconds = t - (minutes * 60);
+
+            if (seconds < 10) {
+                seconds = "0" + seconds;
+            }
+
+            if (minutes === 0) {
+                minutes = "00";
+            } else if (minutes < 10) {
+                minutes = "0" + minutes;
+            }
+
+            return minutes + ":" + seconds;
+        }
+
+        start();
+
+
+
+    });
+
+
+
+    // ACTIONS PERFORMED WHEN CLICKING DONE BUTTON ON QUIZ PAGE
+    $('#btn_done').click(function () {
+
+        // hide the Quiz questions DIV, and...
+        $('#quiz_box').attr('style', 'display:none;');
+        // show the Results page DIV
+        $('#results_box').attr('style', 'display:block;');
+
+        displayResults();
 
     });
 
@@ -166,6 +185,7 @@ $(document).ready(function () {
 
         $('#results_box').attr('style', 'display:none;');
         $('#start_box').attr('style', 'display:block;');
+        location.reload();
         // console.log('hi!');
 
     });
