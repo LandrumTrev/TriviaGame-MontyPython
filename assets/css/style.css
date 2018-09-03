@@ -134,24 +134,14 @@ h3 {
 
 .result_icon {
     float: left;
-    /* background-color: aliceblue; */
-    /* border-radius: 100px; */
-    /* height: 50px; */
-    /* width: 50px; */
-    /* margin-left: 10px; */
-    /* margin-right: 80%; */
 }
 
 .result_text {
     float: left;
-    /* margin-left: 20px; */
-    /* margin-right: 200px; */
 }
 
 .result_number {
     float: right;
-    /* margin-left: 10px; */
-    /* margin-right: 80%; */
 }
 
 .icon {
