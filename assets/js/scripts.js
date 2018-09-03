@@ -4,3 +4,6 @@
 // University of Richmond, Full Stack Web Development Bootcamp
 // JavaScript
 
+$('#btn_start').click(function () {
+    location.reload();
+});

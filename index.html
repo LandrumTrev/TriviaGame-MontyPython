@@ -12,17 +12,24 @@
 
 <body>
 
+    <!-- BEGIN PAGE CONTENT CONTAINER -->
     <div id="container">
 
+        <!-- BEGIN LOGO BOX HEADER -->
         <div id="logo_box">
             <img id="logo" src="assets/images/mp_logo.png" alt="">
         </div>
+        <!-- END LOGO BOX HEADER -->
 
+        <!-- BEGIN CHANGEABLE CONTENT INNER CONTAINER -->
         <div id="content_box">
 
-            <div id="start_box" style="display:none;">
+
+            <!-- BEGIN START PAGE CONTENT -->
+
+            <div id="start_box" style="display:block;">
                 <div id="instruct_box">
-                    <img id="instruct_img" src="assets/images/instructions.png" alt="">
+                    <img id="headline_img" src="assets/images/instructions.png" alt="">
                 </div>
                 <div id="body_content">
                     <p>Quae eos ut cupiditate rerum officia excepturi necessitatibus. Maxime nemo ipsum architecto rerum ut itaque. Dolorem esse non numquam blanditiis dolores aliquam ad quia. Cum et corrupti omnis aspernatur sunt.</p>
@@ -34,7 +41,55 @@
                 </div>
             </div>
 
-            <div id="quiz_box" style="display:block;">
+            <!-- END START PAGE CONTENT -->
+
+            <!-- BEGIN RESULTS PAGE CONTENT -->
+
+            <div id="results_box" style="display:none;">
+
+                <div id="results">
+                    <img id="headline_img" src="assets/images/results.png" alt="">
+                </div>
+                <div id="body_content">
+                    <div class="result_box clearfix">
+                        <div class="result_icon"><img class="icon" src="assets/images/icon_sillywalk.svg" alt=""></div>
+                        <div class="result_text">
+                            <h3>CORRECT</h3>
+                        </div>
+                        <div class="result_number">
+                            <h3>11</h3>
+                        </div>
+                    </div>
+                    <div class="result_box clearfix">
+                        <div class="result_icon"><img class="icon" src="assets/images/icon_ni.svg" alt=""></div>
+                        <div class="result_text">
+                            <h3>INCORRECT</h3>
+                        </div>
+                        <div class="result_number">
+                            <h3>3</h3>
+                        </div>
+                    </div>
+                    <div class="result_box clearfix">
+                        <div class="result_icon""><img class=" icon" src="assets/images/icon_swallow.svg" alt=""></div>
+                        <div class="result_text">
+                            <h3>UNANSWERED</h3>
+                        </div>
+                        <div class="result_number">
+                            <h3>9</h3>
+                        </div>
+                    </div>
+                </div>
+                <div id="btn_space">
+                    <img id="btn_img" src="/assets/images/btn_playAgain.png" alt="">
+                </div>
+
+            </div>
+
+            <!-- END RESULTS PAGE CONTENT -->
+
+            <!-- BEGIN QUIZ PAGE CONTENT -->
+
+            <div id="quiz_box" style="display:none;">
                 <!-- <div id="timer_box">               
                     </div> -->
                 <div id="body_content">
@@ -510,11 +565,14 @@
                     <img id="btn_img" src="/assets/images/btn_done.png" alt="">
                 </div>
             </div>
+            <!-- END QUIZ PAGE CONTENT -->
 
 
         </div>
+        <!-- END CHANGEABLE CONTENT INNER CONTAINER -->
 
     </div>
+    <!-- END PAGE CONTENT CONTAINER -->
 
 
 
