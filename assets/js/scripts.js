@@ -70,9 +70,7 @@ $(document).ready(function () {
 
         });
 
-        // console.log(checkedArray);
-
-        // variables for output of results
+        // results output variables, used by the FOR loop below:
         let aCorrect = 0;
         let aIncorrect = 0;
         let aUnanswered = 0;
@@ -80,23 +78,29 @@ $(document).ready(function () {
         // FOR loop for testing each user response in the checkedArray created above
         for (let j = 0; j < checkedArray.length; j++) {
 
+            // IF the checkedArray item is "XXX" (the HIDDEN and CHECKED by default selection)...
             if (checkedArray[j] === "XXX") {
+                // then mark it as Unanswered
                 aUnanswered = aUnanswered + 1;
+
+                // ELSE IF the checkedArray item matches the answersArray item...
             } else if (checkedArray[j] === answersArray[j]) {
+                // then mark it as Correct
                 aCorrect = aCorrect + 1;
+
+                // otherwise (ELSE)..
             } else {
+                // mark it as incorrect (any other answered value).
                 aIncorrect = aIncorrect + 1;
             }
-        }
 
-        function showResults() {
-
+            // after the IF ELSE decision tree is complete, THEN the results can be written to the page
             $('#theCorrect').text(aCorrect);
             $('#theIncorrect').text(aIncorrect);
             $('#theUnanswered').text(aUnanswered);
+
         }
 
-        showResults();
 
     });
 
