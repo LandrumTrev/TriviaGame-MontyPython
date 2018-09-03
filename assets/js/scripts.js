@@ -4,7 +4,7 @@
 // University of Richmond, Full Stack Web Development Bootcamp
 // JavaScript
 
-let answers = [
+let answersArray = [
     "Tim",
     "Norwegian Blue",
     "Bunny",
@@ -36,49 +36,30 @@ $(document).ready(function () {
     // ACTIONS PERFORMED WHEN CLICKING START BUTTON ON HOME PAGE
     $('#btn_start').click(function () {
 
+        // hide the Start Page DIV, and
         $('#start_box').attr('style', 'display:none;');
+        // show the Quiz questions DIV
         $('#quiz_box').attr('style', 'display:block;');
-        // console.log('hi!');
 
     });
 
     // ACTIONS PERFORMED WHEN CLICKING DONE BUTTON ON QUIZ PAGE
     $('#btn_done').click(function () {
 
+        // hide the Quiz questions DIV, and...
         $('#quiz_box').attr('style', 'display:none;');
+        // show the Results page DIV
         $('#results_box').attr('style', 'display:block;');
 
-        // function getCorrectAnswers(radioName) {
-        //     let choiceButtons = $('[name=radioName]');
-        //     for (let h = 0; h < choiceButtons.length; h++) {
-        //         if(choiceButtons[h].checked) {
-        //             return choiceButtons[h].value;
-        //             console.log('okey dokey!');
 
-        //         }
-        //     }
-        // }
-
-        // function getCorrectScore() {
-        //     let correct = 0;
-        //     for (let i = 0; i < answers.length; i++) {
-        //         // const element = array[i];
-        //         if(getCorrectAnswers("question"+i)===answers[i]) {
-        //             correct += 1;
-        //         }             
-        //     }
-        //     return correct;
-        // }
-
-
-
+        // for some reason, these variables have be initialized OUTSIDE of the below .each function
+        // otherwise there is only a single item in the resulting checkedArray
         let checkedButtons = '';
-        let checkedArray = [];
         let checkedB = '';
+        let checkedArray = [];
 
         // for .each :checked item (radio button) inside the DIV id="quizForm"...
         $("#quizForm :checked").each(function () {
-
             // make the value of checkedButtons a concatenated, comma-separated String
             // of all the values of the value="#" property of .each (this) radio button selected 
             checkedButtons = checkedButtons + ($(this).val()) + ",";
@@ -89,17 +70,30 @@ $(document).ready(function () {
 
         });
 
-        console.log(checkedB);
-        console.log(checkedArray);
+        // console.log(checkedArray);
 
+        // variables for output of results
+        let aCorrect = 0;
+        let aIncorrect = 0;
+        let aUnanswered = 0;
 
+        // FOR loop for testing each user response in the checkedArray created above
+        for (let j = 0; j < checkedArray.length; j++) {
 
+            if (checkedArray[j] === "XXX") {
+                aUnanswered = aUnanswered + 1;
+            } else if (checkedArray[j] === answersArray[j]) {
+                aCorrect = aCorrect + 1;
+            } else {
+                aIncorrect = aIncorrect + 1;
+            }
+        }
 
         function showResults() {
 
-            $('#theCorrect').text('5');
-            $('#theIncorrect').text('5');
-            $('#theUnanswered').text('5');
+            $('#theCorrect').text(aCorrect);
+            $('#theIncorrect').text(aIncorrect);
+            $('#theUnanswered').text(aUnanswered);
         }
 
         showResults();
