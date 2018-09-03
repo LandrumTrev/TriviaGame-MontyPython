@@ -17,6 +17,30 @@ CSS styles */
 }
 
 /* END DECLARE NATIVE SYSTEM FONTS */
+
+
+/* START THE COUNTDOWN TIMER */
+
+#timer {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    /* height: 50px; */
+    text-align: center;
+    font-size: 2rem;
+    padding: 5px;
+    background-color: black;
+    color: white;
+
+}
+
+
+/* END THE COUNTDOWN TIMER */
+
+
+
+
 /* START THE MAIN GAME CONTAINERS */
 body {
     background-color: #8db9cd;
@@ -34,11 +58,13 @@ body {
 /* START THE CONTENT CONTAINERS */
 #logo_box {
     text-align: center;
+    margin-top: 50px;
     /* background-color: bisque; */
 }
 
 #logo {
-    width: 60%;
+    width: 90%;
+    margin-bottom: 10px;
 }
 
 #content_box {

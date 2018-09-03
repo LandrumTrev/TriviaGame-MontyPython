@@ -41,6 +41,63 @@ $(document).ready(function () {
         // show the Quiz questions DIV
         $('#quiz_box').attr('style', 'display:block;');
 
+
+
+        var timer = {
+
+            // set the starting value of the countdown timer in seconds
+            timeLeft: 80,
+
+            start: function () {
+
+                // DONE: Use setInterval to start the count here and set the clock to running.
+                if (!clockRunning) {
+                    intervalId = setInterval(stopwatch.count, 1000);
+                    clockRunning = true;
+                }
+            },
+
+            // define a function for counting down the time
+            countDown: function () {
+                // decrement the timeLeft value by 1 (second)
+                timer.timeLeft--;
+                // create a variable whose value is timeLeft seconds converted into clock format time by timeConverter method
+                var convertedTime = timer.timeConverter(timer.timeLeft);
+                console.log(convertedTime);
+                // DONE: Use the variable we just created to show the converted time in the "display" div.
+                $("#timer").text(convertedTime);
+            },
+
+
+            // timeConverter function copied from the stopwatchSolution.js class activity... thank you! :-)
+            timeConverter: function (t) {
+
+                var minutes = Math.floor(t / 60);
+                var seconds = t - (minutes * 60);
+
+                if (seconds < 10) {
+                    seconds = "0" + seconds;
+                }
+
+                if (minutes === 0) {
+                    minutes = "00";
+                } else if (minutes < 10) {
+                    minutes = "0" + minutes;
+                }
+
+                return minutes + ":" + seconds;
+            }
+
+
+        }
+
+        // setTimeout(timesUp, 1000 * 5);
+
+        // function timesUp() {
+        //     $("#time-left").append("<h2>Time's Up!</h2>");
+        //     console.log("time is up");
+        // }
+
     });
 
     // ACTIONS PERFORMED WHEN CLICKING DONE BUTTON ON QUIZ PAGE
