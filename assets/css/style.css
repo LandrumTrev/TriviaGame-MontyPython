@@ -59,8 +59,8 @@ CSS styles */
     text-align: center;
     font-size: 2rem;
     padding: 5px;
-    background-color: rgb(157, 4, 4);
-    color: rgb(218, 250, 6);
+    background-color: rgb(165, 64, 64);
+    color: rgb(252, 244, 6);
     box-shadow: 0 0 10px rgb(5, 11, 60);
 
 }
@@ -81,6 +81,8 @@ p, legend {
     font-family: 'ComicPapyrus';
     font-size: 1.3rem;
     line-height: 1.8rem;
+    color: rgb(66, 83, 138);;
+
 }
 
 /* CONTAINER holds all content centered with MARGIN and limits MAX-WIDTH */
@@ -158,9 +160,9 @@ legend {
     width: 100%;
     padding: 20px;
     border-radius: 2rem;
-    color: red;
-    font-size: 1.2rem;
-    line-height: 1.6rem;
+    color: rgb(186, 6, 6);;
+    font-size: 1.6rem;
+    line-height: 2.1rem;
     box-shadow: 0 0 35px rgb(167, 158, 149);
 
     /* opacity: .7; */
@@ -178,7 +180,7 @@ fieldset {
 
 h3 {
     font-family: 'ComicPapyrus';
-    font-size: 1.3em;
+    font-size: 1.5em;
     margin: 15px;
 }
 
@@ -234,7 +236,19 @@ h3 {
         /* font-size: 1.3em; */
         margin: 0;
     }
-
+    legend {
+        font-size: 1.3rem;
+        line-height: 1.6rem;
+    
+    }
+    #btn_done {
+        position: relative;
+        /* text-align: center; */
+        right: 25px;
+        bottom: -3px;
+        width: 120%;
+    }
+    
 }
 
 @media screen and (max-width: 768px) {
@@ -253,8 +267,8 @@ h3 {
 /* MIN WIDTH MEDIA QUERIES BELOW */
 @media screen and (min-width: 640px) {
     h3 {
-        font-size: 2em;
-        /* padding: 0; */
+        font-size: 3.0em;
+        margin: 0;
     }
     
 }
@@ -267,7 +281,8 @@ h3 {
 
 @media screen and (min-width: 980px) {
     h3 {
-        font-size: 2.5em;
+        font-size: 3.5em;
+        margin: 0;
     }
 }
 
