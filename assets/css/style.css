@@ -108,7 +108,7 @@ p, legend {
     margin: 0 5% 0px 5%;
     padding: 20px 0 0 0;
     max-width: 980px;
-    background: url(/assets/images/parchment.jpg);
+    background: url(../images/parchment.jpg);
     /* background-color: teal; */
     background-size: contain;
     background-repeat: repeat-y;
