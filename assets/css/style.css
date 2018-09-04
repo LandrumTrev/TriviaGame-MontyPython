@@ -8,7 +8,9 @@ CSS styles */
     box-sizing: border-box;
 }
 
-/* START DECLARE NATIVE SYSTEM FONTS */
+/* START  FONTS */
+
+/* Specify the native system font for various devices 2018 */
 @font-face {
     font-family: system;
     font-style: normal;
@@ -16,12 +18,39 @@ CSS styles */
     src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
 }
 
-/* END DECLARE NATIVE SYSTEM FONTS */
+/* Webfont: CastIron */
+@font-face {
+    font-family: 'CastIron';
+    src: url('../fonts/CastIron.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/CastIron.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/CastIron.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/CastIron.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/CastIron.svg#CastIron') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+/* Webfont: Comic Papyrus */
+@font-face {
+    font-family: 'ComicPapyrus';
+    src: url('../fonts/Comic Papyrus.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/Comic Papyrus.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/Comic Papyrus.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/Comic Papyrus.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/Comic Papyrus.svg#Comic Papyrus') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+/* END FONTS */
 
 
 /* START THE COUNTDOWN TIMER */
 
 #timer {
+    font-family: 'ComicPapyrus';
     position: fixed;
     top: 0px;
     left: 0px;
@@ -30,8 +59,9 @@ CSS styles */
     text-align: center;
     font-size: 2rem;
     padding: 5px;
-    background-color: black;
-    color: white;
+    background-color: rgb(157, 4, 4);
+    color: rgb(218, 250, 6);
+    box-shadow: 0 0 10px rgb(5, 11, 60);
 
 }
 
@@ -43,7 +73,14 @@ CSS styles */
 
 /* START THE MAIN GAME CONTAINERS */
 body {
-    background-color: #8db9cd;
+    background: url(../images/clouds.png),  #5886ad;
+    height: 100vh;
+}
+
+p, legend {
+    font-family: 'ComicPapyrus';
+    font-size: 1.3rem;
+    line-height: 1.8rem;
 }
 
 /* CONTAINER holds all content centered with MARGIN and limits MAX-WIDTH */
@@ -75,23 +112,17 @@ body {
     /* background-color: teal; */
     background-size: contain;
     background-repeat: repeat-y;
+    box-shadow: 0 0 40px rgb(95, 99, 131);
+
 }
 
 /* END THE CONTENT CONTAINERS */
 /* START THE START SCREEN */
-#instruct_box {
-    padding: 2%;
+#instruct_box p {
+    /* font-size: 1.9rem; */
     /* background-color: plum; */
 }
 
-#timer_box {
-    margin: 30px 10% 10px 10%;
-    /* padding: 2%; */
-    /* width: 100%; */
-    height: 100px;
-    background-color: plum;
-    opacity: .5;
-}
 
 #headline_img {
     margin: 30px 5% 5px 5%;
@@ -101,9 +132,9 @@ body {
 
 #body_content {
     margin: 30px 10% 10px 10%;
-    font-family: 'system';
-    font-size: 1.1rem;
-    line-height: 1.5rem;
+    /* font-family: 'system'; */
+    /* font-size: 1.1rem; */
+    /* line-height: 1.5rem; */
     /* text-align: center; */
     /* background-color: paleturquoise; */
 }
@@ -116,6 +147,12 @@ body {
     width: 100%;
 }
 
+#btn_done {
+    position: relative;
+    /* right: -85px; */
+    bottom: -6px;
+    /* width: 100%; */
+}
 legend {
     background-color: rgb(233, 229, 217);
     width: 100%;
@@ -130,7 +167,7 @@ legend {
 }
 
 fieldset p {
-    margin-left: 40px;
+    margin-left: 20px;
 }
 
 fieldset {
@@ -140,7 +177,8 @@ fieldset {
 }
 
 h3 {
-    font-size: 1.1em;
+    font-family: 'ComicPapyrus';
+    font-size: 1.3em;
     margin: 15px;
 }
 
@@ -170,17 +208,33 @@ h3 {
     float: right;
 }
 
-.icon {
-    height: 50px;
+#corrBox {
+    color: darkgreen;
+    text-shadow: 4px 4px 10px #aaa;
+
+}
+
+#inBox {
+    color: maroon;
+    text-shadow: 4px 4px 10px #aaa;
+
+}
+
+#unBox {
+    color: dimgrey;
+    text-shadow: 4px 4px 10px #aaa;
+
 }
 
 /* END THE START SCREEN */
 /* MEDIA QUERIES BELOW */
 /* MAX WIDTH MEDIA QUERIES BELOW */
 @media screen and (max-width: 640px) {
-    #XXX {
-        /* width: 350px; */
+    h3 {
+        /* font-size: 1.3em; */
+        margin: 0;
     }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -200,7 +254,9 @@ h3 {
 @media screen and (min-width: 640px) {
     h3 {
         font-size: 2em;
+        /* padding: 0; */
     }
+    
 }
 
 @media screen and (min-width: 768px) {

@@ -103,10 +103,10 @@ $(document).ready(function () {
         // START COUNTDOWN TIMER CODE
 
         // set the number of seconds the countdown will start at
-        let time = 240;
+        let time = 180;
 
         // write the initial starting number to the page (match to seconds set in the TIME variable)
-        $("#timer").text("04:00");
+        $("#timer").text("03:00");
 
         // declare the intervalId variable (will take a callback function and time length as setInterval)
         let intervalId;
