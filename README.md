@@ -11,7 +11,6 @@
 
 [https://github.com/LandrumTrev/TriviaGame-MontyPython](https://github.com/LandrumTrev/TriviaGame-MontyPython)
 
-> "Welcome to the most foul, cruel, and bad tempered quiz you ever set eyes on!
 
-> You have 3 minutes to find out how big a fan you really are. And should you do poorly, we will taunt you a second time."
+Welcome to the most foul, cruel, and bad tempered quiz you ever set eyes on! You have 3 minutes to find out how big a fan you really are. And should you do poorly, we will taunt you a second time."
 
