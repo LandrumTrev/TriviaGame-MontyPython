@@ -1,4 +1,4 @@
-#### scrolling format jQuery SPA timed multiple-choice quiz
+#### scrolling format jQuery SPA multiple-choice quiz with timer
 # Monty Python Trivia Game
 #### © Richard Trevillian, 2018-09-04
 ##### University of Richmond, Full Stack Web Development Bootcamp
