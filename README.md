@@ -9,8 +9,6 @@ Application initially loads the welcome screen with instructions. When the user 
 
 When either the three minutes timer runs out, or when the user finishes and clicks the DONE button at the end of the quiz (whichever comes first), the quiz ends and the final results page is displayed. Application displays the user's score as number of correct answers, incorrect answers, and unanswered questions.
 
-site: https://landrumtrev.github.io/TriviaGame-MontyPython/ source: https://github.com/LandrumTrev/TriviaGame-MontyPython
-
 [take the quiz: https://landrumtrev.github.io/monty-python-trivia/](https://landrumtrev.github.io/monty-python-trivia/)
 
 [source: https://github.com/LandrumTrev/monty-python-trivia](https://github.com/LandrumTrev/monty-python-trivia)
