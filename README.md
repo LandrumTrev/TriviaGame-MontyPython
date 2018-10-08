@@ -1,7 +1,7 @@
 # Monty Python's Flying Trivia
-##### timed multiple-choice quiz
+##### Single-timer multiple-choice quiz
 
-JavaScript, jQuery, CSS, HTML5, custom web fonts, GitHub. Timed quiz with countdown timer clock and timeout-triggered functionality.
+JavaScript, jQuery, CSS, HTML, custom web fonts, GitHub, responsive web design (RWD). Timed quiz with countdown timer clock and timeout-triggered functionality.
 
 > Welcome to the most foul, cruel, and bad tempered quiz you ever set eyes on! You have 3 minutes to find out how big a fan you really are. And should you do poorly, we will taunt you a second time."
 

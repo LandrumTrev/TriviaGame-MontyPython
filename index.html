@@ -16,18 +16,18 @@
     <div id="container">
 
         <!-- BEGIN LOGO BOX HEADER -->
-        <div id="logo_box">
+        <header id="logo_box">
             <img id="logo" src="assets/images/mp_logo.png" alt="">
-        </div>
+        </header>
         <!-- END LOGO BOX HEADER -->
 
         <!-- BEGIN CHANGEABLE CONTENT INNER CONTAINER -->
-        <div id="content_box">
+        <main id="content_box">
 
 
             <!-- BEGIN START PAGE CONTENT -->
 
-            <div id="start_box" style="display:block;">
+            <section id="start_box" style="display:block;">
                 <div id="instruct_box">
                     <img id="headline_img" src="assets/images/instructions.png" alt="">
                 </div>
@@ -39,13 +39,13 @@
                 <div class="btn_space">
                     <img id="btn_start" class="btn_img" src="assets/images/btn_start.png" alt="">
                 </div>
-            </div>
+            </section>
 
             <!-- END START PAGE CONTENT -->
 
             <!-- BEGIN RESULTS PAGE CONTENT -->
 
-            <div id="results_box" style="display:none;">
+            <section id="results_box" style="display:none;">
 
                 <div id="results">
                     <img id="headline_img" src="assets/images/results.png" alt="">
@@ -80,15 +80,17 @@
                     <img id="btn_playAgain" class="btn_img" src="assets/images/btn_playAgain.png" alt="">
                 </div>
 
-            </div>
+            </section>
 
             <!-- END RESULTS PAGE CONTENT -->
 
             <!-- BEGIN QUIZ PAGE CONTENT -->
 
-            <div id="quiz_box" style="display:none;">
-                <div id="timer">00:00</div>
-                <div id="body_content">
+            <section id="quiz_box" style="display:none;">
+
+                <header id="timer">00:00</header>
+
+                <article id="body_content">
                     <form id="quizForm" name="quizForm" onsubmit="return false;">
 
                         <fieldset>
@@ -646,17 +648,17 @@
 
                         </fieldset>
 
-                        <div class="btn_space">
+                        <footer class="btn_space">
                             <input type="image" name="submit" id="btn_done" class="btn_img" src="assets/images/btn_done.png" alt="Submit">
-                        </div>
+                        </footer>
 
                     </form>
-                </div>
-            </div>
+                </article>
+            </section>
             <!-- END QUIZ PAGE CONTENT -->
 
 
-        </div>
+        </main>
         <!-- END CHANGEABLE CONTENT INNER CONTAINER -->
 
     </div>
